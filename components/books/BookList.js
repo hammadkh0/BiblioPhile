@@ -100,14 +100,10 @@ function Book_List({navigation}) {
       .onSnapshot(querySnapshot => {
         querySnapshot.forEach(documentSnapshot => {
           if (documentSnapshot.id === userid) {
-            // console.log('--------------------------------------');
-            // console.log(documentSnapshot.data().name);
             obj = {name: documentSnapshot.data().name};
           }
         });
-        // console.log(obj);
         setUser({...obj, userid}); //{name,id}
-        // console.log(user);
       });
 
     // Unsubscribe from events when no longer in use
@@ -130,24 +126,10 @@ function Book_List({navigation}) {
         setBooks(bookArray);
         setLoading(false);
       });
-    // console.log(books[0]);
 
     // Unsubscribe from events when no longer in use
     return () => subscriber();
   };
-
-  // const getAPIBooks = async () => {
-  //   await axios
-  //     .get(
-  //       `https://www.googleapis.com/books/v1/volumes?q=book&printType=books&key=AIzaSyAWaEI4aGfqp4PVgvKrVoa2uU1Ft9D82xY&maxResults=10`,
-  //     )
-  //     .then(response => console.log(response.data.items[0]))
-  //     // .then(result => {
-  //     //   // setAPIBooks({books: result.items});
-  //     //   console.log(result.items);
-  //     // })
-  //     .catch(err => console.log(err));
-  // };
 
   // const booklist = books;
   const searchBooks = () => {
@@ -191,7 +173,6 @@ function Book_List({navigation}) {
     fetchImage();
     getUser();
     getBooks();
-    // getAPIBooks();
     // addBooks();
   }, []);
 
@@ -217,17 +198,12 @@ function Book_List({navigation}) {
         <Avatar.Image
           size={80}
           style={{backgroundColor: 'gray'}}
-          // source={{uri: `asset:/UserImages/${DUMMY_USER[0].profileImg}`}}
           source={{
             uri: img,
           }}
         />
 
         <Text style={{color: '#fff', fontSize: 22}}>{user.name}</Text>
-        {/* <Text style={{color: '#fff', fontSize: 22}}>
-          {user.admin ? 'true' : 'false'}
-        </Text> */}
-
         <TouchableOpacity
           style={styles.button}
           onPress={() => {
