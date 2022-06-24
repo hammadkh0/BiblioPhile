@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875692686351",
+    "project_id": "mad-project-26713",
+    "storage_bucket": "mad-project-26713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875692686351:android:1489068bd30ff1a4f2b77a",
+        "android_client_info": {
+          "package_name": "com.bibliophile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875692686351-sg6ksr1t0n6r80g23idu9m42fdorssig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyyS50KSmHqHCHw_2UEIiE0QKk_154mm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875692686351-sg6ksr1t0n6r80g23idu9m42fdorssig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
